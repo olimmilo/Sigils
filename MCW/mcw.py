@@ -30,8 +30,8 @@ drawtop.line((15*s,14*s,16*s,13*s),width=1, fill="black")
 drawtop.line((14*s,15*s,13*s,16*s),width=1, fill="black")
 drawtop.line((10*s,8*s,14.5*s,8*s),width=1, fill="black")
 drawtop.line((10*s,7*s,10*s,9*s),width=1, fill="black")
-drawtop.ellipse((16*s,16*s,14*s,16*s,14*s,14*s,16*s,14*s), outline="black")
-drawtop.ellipse((10*s,10*s,10*s,4*s,4*s,4*s,4*s,10*s), outline="black")
+drawtop.ellipse((16*s,16*s,14*s,14*s), outline="black")
+drawtop.ellipse((10*s,10*s,4*s,4*s), outline="black")
 
 
 ##makes imbot
