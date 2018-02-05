@@ -2,8 +2,8 @@ from PIL import Image, ImageDraw
 
 scale=100
 s=scale
-width=20
-height=20
+width=20*s
+height=20*s
 
 imtop = Image.new("RGB", (width,height), "white")
 immid = Image.new("RGB", (width,height), "white")
