@@ -5,12 +5,13 @@ Shift = 40
 Canvas = 1000
 Buffer = 100
 CENTER=[.5,.5]
+RADIUS=.5
 
 def sqrt(NUM):
     SQRT=NUM**0.5
     return(SQRT)
 
-def Intersect(ANGLE, RADIUS):
+def Intersect(ANGLE):
 	COOR=[.5,.5]
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
@@ -50,7 +51,6 @@ def LineList(ITERATION, SHIFT):
     return()
 
 def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
-	RADIUS=.5
 	LINELIST=[]
 	i=0
 	while i <= 2:
