@@ -39,9 +39,21 @@ def Intersect(CENTER, ANGLE, RADIUS):
 		COOR[1]=m*(COOR[0]-j)+k
 	return(COOR)
 
+def Angle(ITERATION):
+    ANGLE=(0*120)%360
+    return(ANGLE)
+
+def LineList(ITERATION, SHIFT):
+    
 
 def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER):
-	Center=[.5,.5]
+	CENTER=[.5,.5]
+	RADIUS=.5
+	LINELIST=[]
+	i=0
+	while i <= 2:
+	    
+	
 	return()
 
 symbol = Image.new("RGB", (Canvas,Canvas), "white")
