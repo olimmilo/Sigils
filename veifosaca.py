@@ -17,8 +17,6 @@ def Intersect(CENTER, ANGLE, RADIUS):
 	k=CENTER[1]
 	m=ANGLE
 	n=LEN
-	if b/(2*a) != .5:
-		print("wrong b or a")
 	if ANGLE == 0:
 		COOR=[.5,1]
 	elif ANGLE == 90:
