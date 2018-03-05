@@ -4,12 +4,13 @@ Rot = 0
 Shift = 40
 Canvas = 1000
 Buffer = 100
+CENTER=[.5,.5]
 
 def sqrt(NUM):
     SQRT=NUM**0.5
     return(SQRT)
 
-def Intersect(CENTER, ANGLE, RADIUS):
+def Intersect(ANGLE, RADIUS):
 	COOR=[.5,.5]
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
@@ -44,11 +45,11 @@ def Angle(ITERATION):
     return(ANGLE)
 
 def LineList(ITERATION, SHIFT):
-    
+    line=[]
+    line.append([intersect(),intersect()])
     return()
 
-def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER):
-	CENTER=[.5,.5]
+def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
 	RADIUS=.5
 	LINELIST=[]
 	i=0
