@@ -62,7 +62,8 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
 	    LINELIST.extend(list)
 	    list=[]
 	    i=i+1
-	
+	n=0
+	while n < len(LINELIST)
 	return()
 
 symbol = Image.new("RGB", (Canvas,Canvas), "white")
