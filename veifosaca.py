@@ -67,7 +67,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    symbol.line((4.879*s,4.879*s,15.707*s,15.707*s), width=1, fill="black")
+	    drawsymbol.line((4.879*s,4.879*s,15.707*s,15.707*s), width=1, fill="black")
 	return()
 
 DrawSymbol(Rot, Shift, Canvas, Buffer)
