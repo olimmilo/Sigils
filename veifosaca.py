@@ -57,7 +57,9 @@ def LineList(ITERATION, ROT, SHIFT):
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return()
 
-def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
+def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2)
+	SCALE=CANVAS-BUFFER
+	PAD=BUFFER/2
 	LINELIST=[]
 	i=0
 	while i <= 2:
@@ -67,9 +69,9 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    drawsymbol.line((4.879*s,4.879*s,15.707*s,15.707*s), width=1, fill="black")
+	    drawsymbol.line((a,b,c,d), width=1, fill=COLOR1)
 	return()
 
-DrawSymbol(Rot, Shift, Canvas, Buffer)
+DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
 symbol.show()
