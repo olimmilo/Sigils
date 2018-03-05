@@ -14,6 +14,7 @@ def Intersect(CENTER, ANGLE, RADIUS):
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
 	j=CENTER[0]
+	k=CENTER[1]
 	m=ANGLE
 	n=LEN
 	if b/(2*a) != .5:
@@ -28,16 +29,16 @@ def Intersect(CENTER, ANGLE, RADIUS):
 		COOR=[0,.5]
 	elif ANGLE > 0 and ANGLE < 90:
 		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
-		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
+		COOR[1]=m*(COOR[0]-j)+k
 	elif ANGLE > 90 and ANGLE < 180:
 		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
-		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
+		COOR[1]=m*(COOR[0]-j)+k
 	elif ANGLE > 180 and ANGLE < 270:
-		COOR[0]=(-b-(LEN*sqrt((b**2)+1)))/(2*a)
-		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
+		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[1]=m*(COOR[0]-j)+k
 	elif ANGLE > 270 and ANGLE < 0:
-		COOR[0]=(-b+(LEN*sqrt((b**2)+1)))/(2*a)
-		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
+		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[1]=m*(COOR[0]-j)+k
 	return(COOR)
 
 
