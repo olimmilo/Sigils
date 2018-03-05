@@ -11,10 +11,11 @@ def sqrt(NUM):
 
 def Intersect(CENTER, ANGLE, RADIUS):
 	COOR=[.5,.5]
-	a=1+(ANGLE**2)
-	b=((2*(ANGLE**2)*CENTER[0])-(2*CENTER[0]))
-	c=((ANGLE*CENTER[0])**2)+(CENTER[0]**2)
 	ANGLE=ANGLE%360
+	LEN=COOR[0]
+	j=CENTER[0]
+	m=ANGLE
+	n=LEN
 	if b/(2*a) != .5:
 		print("wrong b or a")
 	if ANGLE == 0:
@@ -26,14 +27,17 @@ def Intersect(CENTER, ANGLE, RADIUS):
 	elif ANGLE == 270:
 		COOR=[0,.5]
 	elif ANGLE > 0 and ANGLE < 90:
-		COOR[0]=(-b+sqrt((b**2)-(4*a*c)))/(2*a)
+		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
 		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
 	elif ANGLE > 90 and ANGLE < 180:
-		COOR[0]=(-b-sqrt((b**2)-(4*a*c)))/(2*a)
+		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
 	elif ANGLE > 180 and ANGLE < 270:
-		COOR[0]=(-b-sqrt((b**2)-(4*a*c)))/(2*a)
+		COOR[0]=(-b-(LEN*sqrt((b**2)+1)))/(2*a)
+		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
 	elif ANGLE > 270 and ANGLE < 0:
-		COOR[0]=(-b+sqrt((b**2)-(4*a*c)))/(2*a)
+		COOR[0]=(-b+(LEN*sqrt((b**2)+1)))/(2*a)
+		COOR[1]=(ANGLE*(COOR[0]-CENTER[0]))+CENTER[1]
 	return(COOR)
 
 
