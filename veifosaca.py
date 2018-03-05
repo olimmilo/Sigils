@@ -47,7 +47,7 @@ def Angle(ITERATION):
 
 def LineList(ITERATION, SHIFT):
     line=[]
-    line.append([Intersect(),Intersect()])
+    line.append([Intersect(Angle(ITERATION)),Intersect(Angle((ITERATION-1)%2)-SHIFT)])
     return()
 
 def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER)
