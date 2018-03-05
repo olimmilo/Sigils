@@ -7,15 +7,16 @@ Buffer = 100
 
 def sqrt(NUM):
     SQRT=NUM**0.5
+    return(SQRT)
 
 def Intersect(CENTER, ANGLE, RADIUS):
 	COOR=[.5,.5]
-	a=ANGLE**2
-	b=(-2*CENTER[0])-((ANGLE**2)*CENTER[0])
-	c=((ANGLE**2)*CENTER[0])+(CENTER[0]**2)-(RADIUS**2)
+	a=1+(ANGLE**2)
+	b=((2*(ANGLE**2)*CENTER[0])-(2*CENTER[0]))
+	c=((ANGLE*CENTER[0])**2)+(CENTER[0]**2)
 	ANGLE=ANGLE%360
-	if b != .5:
-		print("wrong b")
+	if b/(2*a) != .5:
+		print("wrong b or a")
 	if ANGLE == 0:
 		COOR=[.5,1]
 	elif ANGLE == 90:
@@ -34,6 +35,7 @@ def Intersect(CENTER, ANGLE, RADIUS):
 	elif ANGLE > 270 and ANGLE < 0:
 		COOR[0]=(-b+sqrt((b**2)-(4*a*c)))/(2*a)
 	return(COOR)
+
 
 def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER):
 	Center=[.5,.5]
