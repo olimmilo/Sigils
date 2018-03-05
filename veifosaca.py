@@ -45,6 +45,7 @@ def Angle(ITERATION):
 
 def LineList(ITERATION, SHIFT):
     
+    return()
 
 def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER):
 	CENTER=[.5,.5]
