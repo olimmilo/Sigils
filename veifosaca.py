@@ -52,7 +52,10 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER):
 	LINELIST=[]
 	i=0
 	while i <= 2:
-	    
+	    list=LineList(i, SHIFT)
+	    LINELIST.extend(list)
+	    list=[]
+	    i=i+1
 	
 	return()
 
