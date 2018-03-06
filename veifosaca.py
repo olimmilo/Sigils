@@ -102,5 +102,5 @@ print()
 print(lis)
 """
 
-
+DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 symbol.show()
