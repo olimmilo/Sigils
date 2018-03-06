@@ -69,7 +69,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2)
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    drawsymbol.line((((a)*SCALE)+PAD,((b)*SCALE)+PAD,((c)*SCALE)+PAD,((d)*SCALE)+PAD), width=1, fill=COLOR1)
+	    drawsymbol.line((((LINELIST[i][0][0])*SCALE)+PAD,((LINELIST[i][0][1])*SCALE)+PAD,((LINELIST[i][1][0])*SCALE)+PAD,((LINELIST[i][1][1])*SCALE)+PAD), width=1, fill=COLOR1)
 	    n=n+1
 	return()
 
