@@ -73,7 +73,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
 	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
 	Sprite(SCREEN, (0,0))
-	Sprite(CIRCLE, tuple([i * SCALE for i in Center]))
+	Sprite(CIRCLE, tuple([(i * SCALE)+PAD for i in Center]))
 	print([i * SCALE for i in Center])
 	i=0
 	while i <= 2:
