@@ -1,7 +1,5 @@
-import pygame
+from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
 import math
-
-pygame.init()
 
 Rot = 0
 Shift = 40
