@@ -82,7 +82,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    line=LINELIST[n]
+	    line=[[i*SCALE for i in LINELIST[n][0]],[j*SCALE for j in LINELIST[n][1]]]
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]) LC1)
 	    Sprite(TEMPline, tuple(line[0]))
 	    print(n)
