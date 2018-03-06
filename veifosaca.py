@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw
+import math
 
 Rot = 0
 Shift = 40
