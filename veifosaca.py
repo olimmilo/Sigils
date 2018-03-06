@@ -60,8 +60,8 @@ def Angle(ITERATION):
 
 def LineList(ITERATION, ROT, SHIFT):
     line=[]
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%2)-SHIFT)+ROT)])
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%2)+SHIFT)+ROT)])
+    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT)])
+    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT)])
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return(line)
 
@@ -91,7 +91,7 @@ ROT=0
 SHIFT=40
 
 test=LineList(ITERATION, ROT, SHIFT)
-test2=(Angle((ITERATION+1)%2)+SHIFT)+ROT
+test2=(Angle((ITERATION+1)%3)+SHIFT)+ROT
 
 print(test2)
 print()
