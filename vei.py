@@ -5,8 +5,8 @@ import math
 
 Rot = 0
 Shift = 40
-Canvas = 1000
-Buffer = 100
+Canvas = 500
+Buffer = 50
 Color1=Color(0x000000, 1.0)
 Color2=Color(0x993399, 1.0)
 Center=[.5,.5]
