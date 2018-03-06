@@ -7,8 +7,8 @@ Rot = 0
 Shift = 40
 Canvas = 1000
 Buffer = 100
-Color1="#000000"
-Color2="#993399"
+Color1=Color(0x000000, 1.0)
+Color2=Color(0x993399, 1.0)
 CENTER=[.5,.5]
 RADIUS=.5
 
