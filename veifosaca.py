@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw
+#from PIL import Image, ImageDraw
 import math
 
 Rot = 0
@@ -10,8 +10,10 @@ Color2="#993399"
 CENTER=[.5,.5]
 RADIUS=.5
 
+"""
 symbol = Image.new("RGB", (Canvas,Canvas), "white")
 drawsymbol = ImageDraw.Draw(symbol)
+"""
 
 def sqrt(NUM):
     SQRT=NUM**0.5
@@ -73,14 +75,25 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    LINELIST.extend(list)
 	    list=[]
 	    i=i+1
+	"""
 	n=0
 	drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	while n < len(LINELIST):
 	    drawsymbol.line((((LINELIST[i][0][0])*SCALE)+PAD,((LINELIST[i][0][1])*SCALE)+PAD,((LINELIST[i][1][0])*SCALE)+PAD,((LINELIST[i][1][1])*SCALE)+PAD), width=1, fill="black")
 	    n=n+1
+	"""
 	return(LINELIST)
 
-DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
+lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
+ITERATION=1
+ROT=0
+SHIFT=40
 
-symbol.show()
+test=LineList(ITERATION, ROT, SHIFT)
+
+print(test)
+print()
+print(lis)
+
+#symbol.show()
