@@ -49,7 +49,7 @@ def Intersect(ANGLE):
 	elif ANGLE > 180 and ANGLE < 270:
 		COOR[0]=(((m**2)*j)+j-(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
-	elif ANGLE > 270 and ANGLE < 0:
+	elif ANGLE > 270 and ANGLE < 360:
 		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
 	return(COOR)
