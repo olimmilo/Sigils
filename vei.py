@@ -59,8 +59,8 @@ def Angle(ITERATION):
 
 def LineList(ITERATION, ROT, SHIFT):
     line=[]
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT)])
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT)])
+    #line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT)])
+    #line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT)])
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return(line)
 
@@ -83,16 +83,19 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    line=[[(i*SCALE)+PAD for i in LINELIST[n][0]],[(j*SCALE)+PAD for j in LINELIST[n][1]]]
+	    LINELIST[n][0]=[(i*SCALE)+PAD for i in LINELIST[n][0]]
+	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
+	    line=LINELIST[n]
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 	    Sprite(TEMPline, tuple(line[0]))
-	    print(n)
-	    print(line)
 	    n=n+1
 
 	return(LINELIST)
 
-print(DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2))
 
+lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
+print(lis)
+"""
 myapp = App()
 myapp.run()
+"""
