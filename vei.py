@@ -70,7 +70,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	LC1=LineStyle(1, COLOR1)
 	LC2=LineStyle(1, COLOR2)
 	BG=Color(0xffffff, 0.0)
-	rectangle = RectangleAsset(50, 20, LC1, COLOR2)
+	rectangle = RectangleAsset(CANVAS, CANVAS, LC1, COLOR2)
 	Sprite(rectangle)
 	i=0
 	while i <= 2:
