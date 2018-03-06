@@ -67,8 +67,10 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
-	LC1=
-	LC2=
+	LC1=LineStyle(1, COLOR1)
+	LC2=LineStyle(1, COLOR2)
+	rectangle = RectangleAsset(50, 20, LC1, COLOR2)
+	Sprite(rectangle)
 	i=0
 	while i <= 2:
 	    list=LineList(i, ROT, SHIFT)
