@@ -16,14 +16,19 @@ drawsymbol = ImageDraw.Draw(symbol)
 def sqrt(NUM):
     SQRT=NUM**0.5
     return(SQRT)
+    
+def radians(ANGLE):
+    angle=ANGLE*((2*math.pi)/360)
+    return(angle)
 
 def Intersect(ANGLE):
 	COOR=[.5,.5]
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
+	r=0.5
 	j=CENTER[0]
 	k=CENTER[1]
-	m=ANGLE
+	m=(math.tan(radians(ANGLE)))
 	n=LEN
 	if ANGLE == 0:
 		COOR=[.5,1]
@@ -34,16 +39,16 @@ def Intersect(ANGLE):
 	elif ANGLE == 270:
 		COOR=[0,.5]
 	elif ANGLE > 0 and ANGLE < 90:
-		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
 	elif ANGLE > 90 and ANGLE < 180:
-		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[0]=(((m**2)*j)+j-(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
 	elif ANGLE > 180 and ANGLE < 270:
-		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[0]=(((m**2)*j)+j-(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
 	elif ANGLE > 270 and ANGLE < 0:
-		COOR[0]=((j+((m**2)*j))+(n*sqrt(1+(m**2))))/(1+(m**2))
+		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
 	return(COOR)
 
