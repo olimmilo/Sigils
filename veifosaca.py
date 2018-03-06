@@ -83,4 +83,4 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
 
-#symbol.show()
+symbol.show()
