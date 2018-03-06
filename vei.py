@@ -72,7 +72,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	BG=Color(0xffffff, 0.0)
 	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
 	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
-	Sprite(SCREEN,CIRCLE)
+	Sprite(SCREEN, (0,0))
 	i=0
 	while i <= 2:
 	    list=LineList(i, ROT, SHIFT)
