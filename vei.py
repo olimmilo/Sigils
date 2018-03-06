@@ -67,6 +67,8 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
+	LC1=
+	LC2=
 	i=0
 	while i <= 2:
 	    list=LineList(i, ROT, SHIFT)
@@ -75,9 +77,9 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    i=i+1
 
 	n=0
-	drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
+	#drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	while n < len(LINELIST):
-	    drawsymbol.line((((LINELIST[n][0][0])*SCALE)+PAD,((LINELIST[n][0][1])*SCALE)+PAD,((LINELIST[n][1][0])*SCALE)+PAD,((LINELIST[n][1][1])*SCALE)+PAD), width=1, fill="black")
+	    #drawsymbol.line((((LINELIST[n][0][0])*SCALE)+PAD,((LINELIST[n][0][1])*SCALE)+PAD,((LINELIST[n][1][0])*SCALE)+PAD,((LINELIST[n][1][1])*SCALE)+PAD), width=1, fill="black")
 	    print(n)
 	    n=n+1
 
