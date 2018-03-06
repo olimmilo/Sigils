@@ -79,7 +79,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	n=0
 	drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	while n < len(LINELIST):
-	    drawsymbol.line((((LINELIST[i][0][0])*SCALE)+PAD,((LINELIST[i][0][1])*SCALE)+PAD,((LINELIST[i][1][0])*SCALE)+PAD,((LINELIST[i][1][1])*SCALE)+PAD), width=1, fill="black")
+	    drawsymbol.line((((LINELIST[n][0][0])*SCALE)+PAD,((LINELIST[n][0][1])*SCALE)+PAD,((LINELIST[n][1][0])*SCALE)+PAD,((LINELIST[n][1][1])*SCALE)+PAD), width=1, fill="black")
 	    print(n)
 	    n=n+1
 
