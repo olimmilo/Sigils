@@ -74,7 +74,6 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
 	Sprite(SCREEN, (0,0))
 	Sprite(CIRCLE, (PAD,PAD))
-	print([(i * SCALE)+PAD for i in Center])
 	i=0
 	while i <= 2:
 	    list=LineList(i, ROT, SHIFT)
@@ -82,9 +81,10 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    list=[]
 	    i=i+1
 	n=0
-	#drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	while n < len(LINELIST):
-	    #drawsymbol.line((((LINELIST[n][0][0])*SCALE)+PAD,((LINELIST[n][0][1])*SCALE)+PAD,((LINELIST[n][1][0])*SCALE)+PAD,((LINELIST[n][1][1])*SCALE)+PAD), width=1, fill="black")
+	    line=LINELIST[n]
+	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]) LC1)
+	    Sprite(TEMPline, (0,0))
 	    print(n)
 	    n=n+1
 
