@@ -73,6 +73,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    LINELIST.extend(list)
 	    list=[]
 	    i=i+1
+	print(LINELIST)
 	#n=0
 	#drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	#while n < len(LINELIST):
