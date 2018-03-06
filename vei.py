@@ -70,15 +70,15 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	LC1=LineStyle(1, COLOR1)
 	LC2=LineStyle(1, COLOR2)
 	BG=Color(0xffffff, 0.0)
-	rectangle = RectangleAsset(CANVAS, CANVAS, LC1, COLOR2)
-	Sprite(rectangle)
+	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, COLOR2)
+	CIRCLE=
+	Sprite(SCREEN,CIRCLE)
 	i=0
 	while i <= 2:
 	    list=LineList(i, ROT, SHIFT)
 	    LINELIST.extend(list)
 	    list=[]
 	    i=i+1
-
 	n=0
 	#drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	while n < len(LINELIST):
