@@ -9,8 +9,8 @@ Canvas = 1000
 Buffer = 100
 Color1=Color(0x000000, 1.0)
 Color2=Color(0x993399, 1.0)
-CENTER=[.5,.5]
-RADIUS=.5
+Center=[.5,.5]
+Radius=.5
 
 
 def sqrt(NUM):
@@ -26,8 +26,8 @@ def Intersect(ANGLE):
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
 	r=0.5
-	j=CENTER[0]
-	k=CENTER[1]
+	j=Center[0]
+	k=Center[1]
 	m=(math.tan(radians(ANGLE)))
 	n=LEN
 	if ANGLE == 0:
@@ -70,8 +70,8 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	LC1=LineStyle(1, COLOR1)
 	LC2=LineStyle(1, COLOR2)
 	BG=Color(0xffffff, 0.0)
-	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, COLOR2)
-	CIRCLE=
+	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
+	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
 	Sprite(SCREEN,CIRCLE)
 	i=0
 	while i <= 2:
