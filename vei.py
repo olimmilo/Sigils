@@ -1,9 +1,19 @@
+from PIL import Image, ImageDraw
+import math
+
+Rot = 0
+Shift = 40
+Canvas = 1000
+Buffer = 100
+Color1="#000000"
 Color2="#993399"
 CENTER=[.5,.5]
 RADIUS=.5
 
+
 symbol = Image.new("RGB", (Canvas,Canvas), "white")
 drawsymbol = ImageDraw.Draw(symbol)
+
 
 def sqrt(NUM):
     SQRT=NUM**0.5
@@ -45,17 +55,17 @@ def Intersect(ANGLE):
 	return(COOR)
 
 def Angle(ITERATION):
-    ANGLE=(0*120)%360
+    ANGLE=(ITERATION*120)%360
     return(ANGLE)
 
 def LineList(ITERATION, ROT, SHIFT):
     line=[]
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%2)-SHIFT)+ROT)])
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%2)+SHIFT)+ROT)])
+    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT)])
+    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT)])
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return(line)
 
-def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2)
+def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
@@ -65,13 +75,33 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2)
 	    LINELIST.extend(list)
 	    list=[]
 	    i=i+1
+
 	n=0
+	drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
 	while n < len(LINELIST):
-	    drawsymbol.line((((LINELIST[i][0][0])*SCALE)+PAD,((LINELIST[i][0][1])*SCALE)+PAD,((LINELIST[i][1][0])*SCALE)+PAD,((LINELIST[i][1][1])*SCALE)+PAD), width=1, fill=COLOR1)
+	    drawsymbol.line((((LINELIST[n][0][0])*SCALE)+PAD,((LINELIST[n][0][1])*SCALE)+PAD,((LINELIST[n][1][0])*SCALE)+PAD,((LINELIST[n][1][1])*SCALE)+PAD), width=1, fill="black")
+	    print(n)
 	    n=n+1
-	drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)+PAD,(0*SCALE)+PAD) width=1, fill=COLOR1)
-	return()
+
+	return(LINELIST)
+
+
+"""
+lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
+
+ITERATION=0
+ROT=0
+SHIFT=40
+
+test=LineList(ITERATION, ROT, SHIFT)
+test2=(Angle((ITERATION+1)%3)+SHIFT)+ROT
+
+print(test2)
+print()
+print(test)
+print()
+print(lis)
+"""
 
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
-
 symbol.show()
