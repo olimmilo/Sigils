@@ -84,6 +84,8 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 
 	return(LINELIST)
 
+
+"""
 lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
 ITERATION=0
@@ -99,4 +101,6 @@ print(test)
 print()
 print(lis)
 """
+
+
 symbol.show()
