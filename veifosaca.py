@@ -53,7 +53,7 @@ def Intersect(ANGLE):
 	return(COOR)
 
 def Angle(ITERATION):
-    ANGLE=(0*120)%360
+    ANGLE=(ITERATION*120)%360
     return(ANGLE)
 
 def LineList(ITERATION, ROT, SHIFT):
@@ -80,6 +80,8 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    #n=n+1
 	return(LINELIST)
 
-print(DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2))
+print(Intersect(Angle(1)))
+
+#print(DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2))
 
 #symbol.show()
