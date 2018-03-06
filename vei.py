@@ -5,7 +5,7 @@ import math
 
 Rot = 0
 Shift = 40
-Canvas = 550
+Canvas = 500
 Buffer = 50
 Color1=Color(0x000000, 1.0)
 Color2=Color(0x993399, 1.0)
@@ -74,7 +74,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
 	Sprite(SCREEN, (0,0))
 	Sprite(CIRCLE, tuple([(i * SCALE)+PAD for i in Center]))
-	print([i * SCALE for i in Center])
+	print([(i * SCALE)+PAD for i in Center])
 	i=0
 	while i <= 2:
 	    list=LineList(i, ROT, SHIFT)
