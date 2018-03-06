@@ -1,4 +1,4 @@
-#from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw
 import math
 
 Rot = 0
@@ -10,10 +10,10 @@ Color2="#993399"
 CENTER=[.5,.5]
 RADIUS=.5
 
-"""
+
 symbol = Image.new("RGB", (Canvas,Canvas), "white")
 drawsymbol = ImageDraw.Draw(symbol)
-"""
+
 
 def sqrt(NUM):
     SQRT=NUM**0.5
