@@ -13,10 +13,6 @@ CENTER=[.5,.5]
 RADIUS=.5
 
 
-symbol = Image.new("RGB", (Canvas,Canvas), "white")
-drawsymbol = ImageDraw.Draw(symbol)
-
-
 def sqrt(NUM):
     SQRT=NUM**0.5
     return(SQRT)
