@@ -1,4 +1,5 @@
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, LineAsset
+
 import math
 
 #go here https://github.com/HHS-IntroProgramming/Standards-and-Syllabus/wiki/Programmed-Graphics
@@ -89,24 +90,6 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    n=n+1
 
 	return(LINELIST)
-
-
-"""
-lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
-
-ITERATION=0
-ROT=0
-SHIFT=40
-
-test=LineList(ITERATION, ROT, SHIFT)
-test2=(Angle((ITERATION+1)%3)+SHIFT)+ROT
-
-print(test2)
-print()
-print(test)
-print()
-print(lis)
-"""
 
 print(DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2))
 
