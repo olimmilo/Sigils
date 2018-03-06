@@ -86,12 +86,15 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 
 lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
-ITERATION=1
+ITERATION=0
 ROT=0
 SHIFT=40
 
 test=LineList(ITERATION, ROT, SHIFT)
+test2=(Angle((ITERATION+1)%2)+SHIFT)+ROT
 
+print(test2)
+print()
 print(test)
 print()
 print(lis)
