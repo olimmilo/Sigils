@@ -1,5 +1,7 @@
-from PIL import Image, ImageDraw
+import pygame
 import math
+
+pygame.init()
 
 Rot = 0
 Shift = 40
