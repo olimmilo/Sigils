@@ -88,10 +88,8 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
-	    TEMPpol=PolygonAsset([tuple(line[0]),tuple(line[1]),tuple(line[0])], LC1, BG)
-	    Sprite(TEMPpol, ((line[0][0]+line[1][0])/2,(line[0][1]+line[1][1])/2))
-	    #TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
-	    #Sprite(TEMPline, ((line[0][0]+line[1][0])/2,(line[0][1]+line[1][1])/2))
+	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
+	    Sprite(TEMPline, ((line[0][0]+line[1][0])/2,(line[0][1]+line[1][1])/2))
 	    n=n+1
 
 	return(LINELIST)
