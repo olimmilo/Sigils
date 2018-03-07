@@ -88,16 +88,13 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
-	    if ((sqrt(((LINELIST[n][0][0])**2)+((LINELIST[n][0][1])**2))) > ((sqrt(((LINELIST[n][0][0])**2)+((LINELIST[n][0][1])**2))):
-	        print()
-        elif ((sqrt(((LINELIST[n][0][0])**2)+((LINELIST[n][0][1])**2))) <= ((sqrt(((LINELIST[n][0][0])**2)+((LINELIST[n][0][1])**2))):
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 	    Sprite(TEMPline, tuple(line[0]))
 	    n=n+1
 
 	return(LINELIST)
 
-DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
+print(DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2))
 
 DrawSigil = App()
 DrawSigil.run()
