@@ -32,13 +32,13 @@ def Intersect(ANGLE):
 	m=(math.tan(radians(ANGLE)))
 	n=LEN
 	if ANGLE == 0:
-		COOR=[.5,1]
-	elif ANGLE == 90:
 		COOR=[1,.5]
+	elif ANGLE == 90:
+		COOR=[.5,1]
 	elif ANGLE == 180:
-		COOR=[.5,0]
-	elif ANGLE == 270:
 		COOR=[0,.5]
+	elif ANGLE == 270:
+		COOR=[.5,0]
 	elif ANGLE > 0 and ANGLE < 90:
 		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
