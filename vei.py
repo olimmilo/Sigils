@@ -23,7 +23,7 @@ def radians(ANGLE):
     return(angle)
 
 def Intersect(ANGLE):
-	COOR=[.5,.5]
+	COOR=[-1,-1]
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
 	r=0.5
@@ -51,6 +51,8 @@ def Intersect(ANGLE):
 	elif ANGLE > 270 and ANGLE < 360:
 		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
+	if COOR[0] < 0 or COOR[1] < 0:
+	    print("you done fucked up")
 	return(COOR)
 
 def Angle(ITERATION):
@@ -83,7 +85,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    LINELIST[n][0]=[(i*SCALE)+PAD for i in LINELIST[n][0]]
+	    LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
@@ -94,5 +96,5 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
-myapp = App()
-myapp.run()
+DrawSigil = App()
+DrawSigil.run()
