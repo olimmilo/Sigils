@@ -104,6 +104,8 @@ while g < len(lisy):
     h=0
     while h < len(lisy[g]):
         print(lisy[g][h][0],lisy[g][h][0])
+        h=h+1
+    g=g+1
 
 DrawSigil = App()
 DrawSigil.run()
