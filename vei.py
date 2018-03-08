@@ -94,12 +94,11 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 		LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 		line=LINELIST[n]
-		slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
-		rslope=math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0]))
+		slope=(degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0]))))%360
+		rslope=(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))%(2*math.pi)
 		print(slope,rslope)
 		hypot=(line[1][0]-line[1][0])/(math.cos(rslope))
 		TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
-		print(slope)
 		if slope >= 0 and slope < 90:
 			Sprite(TEMPline, (line[0][0], line[0][1]))
 		elif slope >= 90 and slope < 180:
