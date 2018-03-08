@@ -23,7 +23,7 @@ def radians(ANGLE):
 
 while i < 12:
     angle=radians((360/numrot)*((i+(numrot/4))%numrot))
-    print(angle)
+    line=[math.cos(angle)*radius,math.sin(angle)*radius]
     i=i+1
 
 DrawSigil = App()
