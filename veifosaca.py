@@ -4,10 +4,12 @@ import math
 
 Rot = 0
 Shift = 40
-Canvas = 200
+Canvas = 100
 Buffer = 0
 Center=[.5,.5]
 Radius=.5
+Resolution=100
+
 
 
 def sqrt(NUM):
@@ -66,7 +68,7 @@ def LineList(ITERATION, ROT, SHIFT):
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return(line)
 
-def Draw2d(ROT, SHIFT, CANVAS, BUFFER):
+def DrawInit2d(ROT, SHIFT, CANVAS, BUFFER):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
@@ -78,4 +80,4 @@ def Draw2d(ROT, SHIFT, CANVAS, BUFFER):
 		i=i+1
 	return(LINELIST)
 
-Coordinates=Draw2d(Rot, Shift, Canvas, Buffer)
+Coordinates=DrawInit2d(Rot, Shift, Canvas, Buffer)
