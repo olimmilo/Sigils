@@ -1,15 +1,15 @@
 import math
 
-Rot = 0
-Shift = 40
-Canvas = 100
-Buffer = 0
+Rot=0
+Shift=40
+Canvas=100
+Buffer=0
 Center=[.5,.5]
 Radius=.5
 GreaterRes=256
 LesserRes=256
-zInnerRadius=
-zOuterRadius=
+zInnerRadius=10
+zOuterRadius=10
 
 def sqrt(NUM):
     SQRT=NUM**0.5
