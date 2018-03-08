@@ -14,7 +14,7 @@ test2=LineAsset(900, 300, LC2)
 Sprite(test2, (0,0))
 """
 numrot=12
-radius=500
+radius=300
 i=0
 
 def radians(ANGLE):
@@ -26,7 +26,8 @@ while i < 12:
     angle=radians((360/numrot)*((i+(numrot/4))%numrot))
     linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
     line=LineAsset(linecoor[0], linecoor[1], LC1[i])
-    Sprite(line, (500, 500))
+    print(linecoor)
+    Sprite(line, (300, 300))
     i=i+1
 
 DrawSigil = App()
