@@ -20,7 +20,7 @@ Sprite(test2, (0,0))
 circle=CircleAsset((radius), LC2, BG)
 center=CircleAsset((radius/10), LC2, Color2)
 Sprite(circle, (0,0))
-Sprite(center, (0,0))
+Sprite(10, (140,140))
 
 i=0
 
