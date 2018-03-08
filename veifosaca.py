@@ -66,7 +66,7 @@ def LineList(ITERATION, ROT, SHIFT):
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return(line)
 
-def Draw2D(ROT, SHIFT, CANVAS, BUFFER):
+def Draw2d(ROT, SHIFT, CANVAS, BUFFER):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
@@ -78,4 +78,4 @@ def Draw2D(ROT, SHIFT, CANVAS, BUFFER):
 		i=i+1
 	return(LINELIST)
 
-Coordinates=Draw2D(Rot, Shift, Canvas, Buffer)
+Coordinates=Draw2d(Rot, Shift, Canvas, Buffer)
