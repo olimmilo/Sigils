@@ -27,7 +27,7 @@ while i < 12:
     linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
     line=LineAsset(linecoor[0], linecoor[1], LC1[i])
     print(linecoor)
-    Sprite(line, (150, 150))
+    Sprite(line, (300, 300))
     i=i+1
 
 DrawSigil = App()
