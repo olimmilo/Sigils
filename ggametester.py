@@ -13,7 +13,7 @@ Sprite(test, (900,300))
 test2=LineAsset(900, 300, LC2)
 Sprite(test2, (0,0))
 """
-numrot=12
+numrot=6
 radius=300
 i=0
 
@@ -22,7 +22,7 @@ def radians(ANGLE):
     return(angle)
 
 
-while i < (numrot/4):
+while i < (numrot):
     angle=radians((360/numrot)*((i+(numrot/4))%numrot))
     linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
     line=LineAsset(linecoor[0], linecoor[1], LC1[i])
