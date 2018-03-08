@@ -30,10 +30,10 @@ def radians(ANGLE):
     return(angle)
 
 
-while i < (numrot/2):
+while i < (numrot):
     angle=radians((360/numrot)*((i+(numrot/4))%numrot))
     linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
-    line=LineAsset(linecoor[0], linecoor[1], LC1[i*2])
+    line=LineAsset(linecoor[0], linecoor[1], LC1[i])
     print((360/numrot)*((i+(numrot/4))%numrot),linecoor)
     if ((360/numrot)*((i+(numrot/4))%numrot)) >= 0 and ((360/numrot)*((i+(numrot/4))%numrot)) < 90:
          Sprite(line, (300, 300))
@@ -43,7 +43,7 @@ while i < (numrot/2):
         Sprite(line, (300+(math.cos(angle)*300), 300+(math.sin(angle)*300)))
     elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 270 and ((360/numrot)*((i+(numrot/4))%numrot)) < 360:
         Sprite(line, (300+(math.cos(angle)*300), 300+(math.sin(angle)*300)))
-    NUMBER=LineAsset(100,250, LC1[i*2])
+    NUMBER=LineAsset(100,250, LC1[i])
     Sprite(NUMBER, (600+(50*i),500))
     i=i+1
 
