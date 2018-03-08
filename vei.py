@@ -84,19 +84,19 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	Sprite(CIRCLE, (PAD,PAD))
 	i=0
 	while i <= 2:
-	    list=LineList(i, ROT, SHIFT)
-	    LINELIST.extend(list)
-	    list=[]
-	    i=i+1
+		list=LineList(i, ROT, SHIFT)
+		LINELIST.extend(list)
+		list=[]
+		i=i+1
 	n=0
 	while n < len(LINELIST):
-	    LC1=LineStyle(1, COLOR1[n+1])
-	    LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
-	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
-	    line=LINELIST[n]
-	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
-	    slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
-	    hypot=(line[1][0]-line[1][0])/(math.cos(slope))
+		LC1=LineStyle(1, COLOR1[n+1])
+		LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
+		LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
+		line=LINELIST[n]
+		TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
+		slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
+		hypot=(line[1][0]-line[1][0])/(math.cos(slope))
 		if slope >= 0 and slope < 90:
 			Sprite(TEMPline, ((line[1][0]-line[0][0]), (line[1][1]-line[0][1])))
 		elif slope >= 90 and slope < 180:
@@ -105,10 +105,10 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 			Sprite(TEMPline, ((line[1][0]-line[0][0])+(math.cos(slope)*hypot), (line[1][1]-line[0][1])+(math.sin(slope)*hypot)))
 		elif slope >= 270 and slope < 360:
 			Sprite(TEMPline, ((line[1][0]-line[0][0]), (line[1][1]-line[0][1])+(math.sin(angle)*hypot)))
-	    #Sprite(TEMPline, (line[0][0],line[0][1]))
-	    NUMBER=LineAsset(100,250, LC1)
-	    Sprite(NUMBER, (600+(50*n),500))
-	    n=n+1
+		#Sprite(TEMPline, (line[0][0],line[0][1]))
+		NUMBER=LineAsset(100,250, LC1)
+		Sprite(NUMBER, (600+(50*n),500))
+		n=n+1
 
 	return(LINELIST)
 
