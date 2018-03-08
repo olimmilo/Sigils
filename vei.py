@@ -91,14 +91,16 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
+	    """
         if ((360/numrot)*((i+(numrot/4))%numrot)) >= 0 and ((360/numrot)*((i+(numrot/4))%numrot)) < 90:
-            Sprite(line, (300, 300))
+            Sprite(TEMPline, (300, 300))
         elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 90 and ((360/numrot)*((i+(numrot/4))%numrot)) < 180:
-            Sprite(line, (300+(math.cos(angle)*300), 300))
+            Sprite(TEMPline, (300+(math.cos(angle)*300), 300))
         elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 180 and ((360/numrot)*((i+(numrot/4))%numrot)) < 270:
-            Sprite(line, (300+(math.cos(angle)*300), 300+(math.sin(angle)*300)))
+            Sprite(TEMPline, (300+(math.cos(angle)*300), 300+(math.sin(angle)*300)))
         elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 270 and ((360/numrot)*((i+(numrot/4))%numrot)) < 360:
-            Sprite(line, (300, 300+(math.sin(angle)*300)))
+            Sprite(TEMPline, (300, 300+(math.sin(angle)*300)))
+        """
 	    Sprite(TEMPline, (line[0][0],line[0][1]))
 	    NUMBER=LineAsset(100,250, LC1)
 	    Sprite(NUMBER, (600+(50*n),500))
