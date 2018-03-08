@@ -111,7 +111,6 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		elif slope >= 270 and slope < 360:
 			Sprite(TEMPline, (line[0][0], line[0][1]+(math.sin(rslope)*hypot)))
 			print("d")
-			print(hypot)
 		
 		#Sprite(TEMPline, (line[0][0],line[0][1]))
 		NUMBER=LineAsset(100,250, LC1)
