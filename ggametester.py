@@ -22,7 +22,7 @@ def radians(ANGLE):
 
 
 while i < 12:
-    
+    angle=radians((360/numrot)*((i+(i/4))%i))
     i=i+1
 
 DrawSigil = App()
