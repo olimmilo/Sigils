@@ -1,7 +1,5 @@
 import math
 
-#go here https://github.com/HHS-IntroProgramming/Standards-and-Syllabus/wiki/Programmed-Graphics
-
 Rot = 0
 Shift = 40
 Canvas = 100
