@@ -6,7 +6,7 @@ import math
 
 Rot = 0
 Shift = 40
-Canvas = 500
+Canvas = 200
 Buffer = 0
 Colors=[0xFE2712, 0xFC600A, 0xFB9902, 0xFCCC1A, 0xFEFE33, 0xB2D732, 0x66B032, 0x347C98, 0x0247FE, 0x4424D6, 0x8601AF, 0xC21460]
 Color1=[Color(q, 1.0) for q in Colors]
