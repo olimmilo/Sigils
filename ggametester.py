@@ -12,7 +12,7 @@ test=LineAsset(200, 300, LC1)
 Sprite(test, (900,300))
 test2=LineAsset(900, 300, LC2)
 Sprite(test2, (0,0))
-"""" 
+"""
 numrot=12
 i=0
 
