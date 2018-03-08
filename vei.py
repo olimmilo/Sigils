@@ -100,11 +100,11 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		hypot2=(line[1][1]-line[0][1])/(math.sin(rslope))
 		print(hypot-hypot2)
 		if line[1][0] == line[0][0]:
-		    
-		    
+		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
+		    Sprite(TEMPline, (line[0][0], line[0][1]))
 		elif line[1][1] == line[1][0]:
-		    
-		    
+		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
+		    Sprite(TEMPline, (line[0][0], line[0][1]))
 		else:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		if slope > 0 and slope < 90:
