@@ -6,8 +6,8 @@ Canvas = 100
 Buffer = 0
 Center=[.5,.5]
 Radius=.5
-GreaterRes=100
-LesserRes=
+GreaterRes=256
+LesserRes=256
 zInnerRadius=
 zOuterRadius=
 
