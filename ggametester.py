@@ -22,7 +22,7 @@ def radians(ANGLE):
 
 
 while i < 12:
-    angle=Radians((360/numrot)*((i+(numrot/4))%numrot))
+    angle=radians((360/numrot)*((i+(numrot/4))%numrot))
     print(angle)
     i=i+1
 
