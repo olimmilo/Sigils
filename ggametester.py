@@ -35,7 +35,7 @@ while i < (numrot/2):
     linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
     line=LineAsset(linecoor[0], linecoor[1], LC1[i*2])
     print((360/numrot)*((i+(numrot/4))%numrot),linecoor)
-    if ((360/numrot)*((i+(numrot/4))%numrot)) 
+    #if ((360/numrot)*((i+(numrot/4))%numrot)) 
     Sprite(line, (300+(math.cos(angle)*300), 300))
     NUMBER=LineAsset(100,250, LC1[i*2])
     Sprite(NUMBER, (600+(50*i),500))
