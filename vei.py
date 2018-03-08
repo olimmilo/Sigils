@@ -95,7 +95,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
-	    slope=math.atan
+	    slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
 	    """
         if ((360/numrot)*((i+(numrot/4))%numrot)) >= 0 and ((360/numrot)*((i+(numrot/4))%numrot)) < 90:
             Sprite(TEMPline, (300, 300))
