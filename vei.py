@@ -8,7 +8,8 @@ Rot = 0
 Shift = 40
 Canvas = 500
 Buffer = 0
-Color1=Color(0x000000, 1.0)
+Colors=[0xFE2712, 0xFC600A, 0xFB9902, 0xFCCC1A, 0xFEFE33, 0xB2D732, 0x66B032, 0x347C98, 0x0247FE, 0x4424D6, 0x8601AF, 0xC21460]
+Color1=[Color(q, 1.0) for q in Colors]
 Color2=Color(0x993399, 1.0)
 Center=[.5,.5]
 Radius=.5
@@ -70,7 +71,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
-	LC1=LineStyle(1, COLOR1)
+	LC1=LineStyle(1, COLOR1[0])
 	LC2=LineStyle(1, COLOR2)
 	BG=Color(0xffffff, 0.0)
 	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
@@ -85,6 +86,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
+	    LC1=LineStyle(1, COLOR1[n])
 	    LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
