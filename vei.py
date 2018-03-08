@@ -95,17 +95,18 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 		line=LINELIST[n]
 		slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
+		rslope=radians(slope)
 		hypot=(line[1][0]-line[1][0])/(math.cos(slope))
 		TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		print(slope)
 		if slope >= 0 and slope < 90:
 			Sprite(TEMPline, (line[0][0], line[0][1]))
 		elif slope >= 90 and slope < 180:
-			Sprite(TEMPline, (line[0][0]+(math.cos(slope)*hypot), line[0][1]))
+			Sprite(TEMPline, (line[0][0]+(math.cos(rslope)*hypot), line[0][1]))
 		elif slope >= 180 and slope < 270:
-			Sprite(TEMPline, (line[0][0]+(math.cos(slope)*hypot), line[0][1]+(math.sin(slope)*hypot)))
+			Sprite(TEMPline, (line[0][0]+(math.cos(rslope)*hypot), line[0][1]+(math.sin(rslope)*hypot)))
 		elif slope >= 270 and slope < 360:
-			Sprite(TEMPline, (line[0][0], line[0][1]+(math.sin(angle)*hypot)))
+			Sprite(TEMPline, (line[0][0], line[0][1]+(math.sin(rslope)*hypot)))
 		
 		#Sprite(TEMPline, (line[0][0],line[0][1]))
 		NUMBER=LineAsset(100,250, LC1)
