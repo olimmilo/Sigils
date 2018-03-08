@@ -96,8 +96,9 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		line=LINELIST[n]
 		slope=(degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0]))))%360
 		rslope=(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))%(2*math.pi)
-		print(slope,rslope)
 		hypot=(line[1][0]-line[0][0])/(math.cos(rslope))
+		hypot2=(line[1][1]-line[0][1])/(math.sin(rslope))
+		print(hypot-hypot2)
 		TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		if slope >= 0 and slope < 90:
 			Sprite(TEMPline, (line[0][0], line[0][1]))
