@@ -8,8 +8,8 @@ Center=[.5,.5]
 Radius=.5
 GreaterRes=256
 LesserRes=256
-zInnerRadius=10
-zOuterRadius=10
+zInnerRadius=5
+zOuterRadius=5
 
 def sqrt(NUM):
     SQRT=NUM**0.5
