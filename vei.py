@@ -97,13 +97,13 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 	    slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
 	    """
-        if ((360/numrot)*((i+(numrot/4))%numrot)) >= 0 and ((360/numrot)*((i+(numrot/4))%numrot)) < 90:
+        if slope >= 0 and slope < 90:
             Sprite(TEMPline, (300, 300))
-        elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 90 and ((360/numrot)*((i+(numrot/4))%numrot)) < 180:
+        elif slope >= 90 and slope < 180:
             Sprite(TEMPline, (300+(math.cos(angle)*300), 300))
-        elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 180 and ((360/numrot)*((i+(numrot/4))%numrot)) < 270:
+        elif slope >= 180 and slope < 270:
             Sprite(TEMPline, (300+(math.cos(angle)*300), 300+(math.sin(angle)*300)))
-        elif ((360/numrot)*((i+(numrot/4))%numrot)) >= 270 and ((360/numrot)*((i+(numrot/4))%numrot)) < 360:
+        elif slope >= 270 and slope < 360:
             Sprite(TEMPline, (300, 300+(math.sin(angle)*300)))
         """
 	    Sprite(TEMPline, (line[0][0],line[0][1]))
