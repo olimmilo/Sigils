@@ -93,7 +93,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 	    Sprite(TEMPline, (line[0][0],line[0][1]))
 	    NUMBER=LineAsset(100,250, LC1)
-	    Sprite(NUMBER, (500+(50*n),500))
+	    Sprite(NUMBER, (600+(50*n),500))
 	    n=n+1
 
 	return(LINELIST)
