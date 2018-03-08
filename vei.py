@@ -86,12 +86,14 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	    i=i+1
 	n=0
 	while n < len(LINELIST):
-	    LC1=LineStyle(1, COLOR1[n])
+	    LC1=LineStyle(1, COLOR1[n+1])
 	    LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 	    LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 	    line=LINELIST[n]
 	    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 	    Sprite(TEMPline, (line[0][0],line[0][1]))
+	    NUMBER=LineAsset(100,250, LC1)
+	    Sprite(NUMBER, (500+(50*n),500))
 	    n=n+1
 
 	return(LINELIST)
