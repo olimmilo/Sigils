@@ -22,7 +22,7 @@ def radians(ANGLE):
     return(angle)
 
 
-while i < 12:
+while i < (numrot/4):
     angle=radians((360/numrot)*((i+(numrot/4))%numrot))
     linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
     line=LineAsset(linecoor[0], linecoor[1], LC1[i])
