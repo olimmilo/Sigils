@@ -8,6 +8,7 @@ BG=Color(0xffffff, 0.0)
 numrot=6
 radius=300
 LC1=[LineStyle(1, r) for r in Color1]
+LC2=LineStyle(1, Color2)
 
 """
 test=LineAsset(200, 300, LC1)
@@ -16,7 +17,7 @@ test2=LineAsset(900, 300, LC2)
 Sprite(test2, (0,0))
 """
 
-circle=CircleAsset((radius), LC1, BG)
+circle=CircleAsset((radius), LC2, BG)
 Sprite(Circle, (radius/2,radius/2))
 
 i=0
