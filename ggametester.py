@@ -18,7 +18,7 @@ Sprite(test2, (0,0))
 """
 
 circle=CircleAsset((radius), LC2, BG)
-Sprite(Circle, (radius/2,radius/2))
+Sprite(circle, (radius/2,radius/2))
 
 i=0
 
