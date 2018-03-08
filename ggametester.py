@@ -9,6 +9,7 @@ numrot=6
 radius=300
 LC1=[LineStyle(1, r) for r in Color1]
 LC2=LineStyle(1, Color2)
+LC3=LineStyle(5, Color2)
 
 """
 test=LineAsset(200, 300, LC1)
@@ -18,7 +19,7 @@ Sprite(test2, (0,0))
 """
 
 circle=CircleAsset((radius), LC2, BG)
-center=CircleAsset(10, LC2, Color2)
+center=CircleAsset(10, LC3, BG)
 Sprite(circle, (0,0))
 Sprite(center, (290,290))
 
