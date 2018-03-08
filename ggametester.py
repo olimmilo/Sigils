@@ -3,8 +3,10 @@ import math
 
 Colors=[0xFE2712, 0xFC600A, 0xFB9902, 0xFCCC1A, 0xFEFE33, 0xB2D732, 0x66B032, 0x347C98, 0x0247FE, 0x4424D6, 0x8601AF, 0xC21460]
 Color1=[Color(q, 1.0) for q in Colors]
-Color2=Color(0x0000FF, 1.0)
-
+Color2=Color(0x000000, 1.0)
+BG=Color(0xffffff, 0.0)
+numrot=6
+radius=300
 LC1=[LineStyle(1, r) for r in Color1]
 
 """
@@ -13,8 +15,10 @@ Sprite(test, (900,300))
 test2=LineAsset(900, 300, LC2)
 Sprite(test2, (0,0))
 """
-numrot=6
-radius=300
+
+circle=CircleAsset((radius), LC1, BG)
+Sprite(Circle, (radius/2,radius/2))
+
 i=0
 
 def radians(ANGLE):
