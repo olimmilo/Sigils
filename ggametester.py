@@ -14,6 +14,7 @@ test2=LineAsset(900, 300, LC2)
 Sprite(test2, (0,0))
 """
 numrot=12
+radius=500
 i=0
 
 def radians(ANGLE):
