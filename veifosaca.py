@@ -1,18 +1,13 @@
-from PIL import Image, ImageDraw
 import math
+
+#go here https://github.com/HHS-IntroProgramming/Standards-and-Syllabus/wiki/Programmed-Graphics
 
 Rot = 0
 Shift = 40
-Canvas = 1000
-Buffer = 100
-Color1="#000000"
-Color2="#993399"
-CENTER=[.5,.5]
-RADIUS=.5
-
-
-symbol = Image.new("RGB", (Canvas,Canvas), "white")
-drawsymbol = ImageDraw.Draw(symbol)
+Canvas = 200
+Buffer = 0
+Center=[.5,.5]
+Radius=.5
 
 
 def sqrt(NUM):
@@ -22,24 +17,28 @@ def sqrt(NUM):
 def radians(ANGLE):
     angle=ANGLE*((2*math.pi)/360)
     return(angle)
+    
+def degrees(ANGLE):
+    angle=ANGLE*(360/(2*math.pi))
+    return(angle)
 
 def Intersect(ANGLE):
-	COOR=[.5,.5]
+	COOR=[-1,-1]
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
 	r=0.5
-	j=CENTER[0]
-	k=CENTER[1]
+	j=Center[0]
+	k=Center[1]
 	m=(math.tan(radians(ANGLE)))
 	n=LEN
 	if ANGLE == 0:
-		COOR=[.5,1]
-	elif ANGLE == 90:
 		COOR=[1,.5]
+	elif ANGLE == 90:
+		COOR=[.5,1]
 	elif ANGLE == 180:
-		COOR=[.5,0]
-	elif ANGLE == 270:
 		COOR=[0,.5]
+	elif ANGLE == 270:
+		COOR=[.5,0]
 	elif ANGLE > 0 and ANGLE < 90:
 		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
@@ -52,6 +51,8 @@ def Intersect(ANGLE):
 	elif ANGLE > 270 and ANGLE < 360:
 		COOR[0]=(((m**2)*j)+j+(r*sqrt((m**2)+1)))/((m**2)+1)
 		COOR[1]=m*(COOR[0]-j)+k
+	if COOR[0] < 0 or COOR[1] < 0:
+	    print("you done fucked up")
 	return(COOR)
 
 def Angle(ITERATION):
@@ -65,43 +66,16 @@ def LineList(ITERATION, ROT, SHIFT):
     line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
     return(line)
 
-def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
+def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
 	i=0
 	while i <= 2:
-	    list=LineList(i, ROT, SHIFT)
-	    LINELIST.extend(list)
-	    list=[]
-	    i=i+1
-
-	n=0
-	drawsymbol.ellipse(((0*SCALE)+PAD,(0*SCALE)+PAD,(1*SCALE)+PAD,(1*SCALE)), outline="black")
-	while n < len(LINELIST):
-	    drawsymbol.line((((LINELIST[n][0][0])*SCALE)+PAD,((LINELIST[n][0][1])*SCALE)+PAD,((LINELIST[n][1][0])*SCALE)+PAD,((LINELIST[n][1][1])*SCALE)+PAD), width=1, fill="black")
-	    print(n)
-	    n=n+1
-
+		list=LineList(i, ROT, SHIFT)
+		LINELIST.extend(list)
+		list=[]
+		i=i+1
 	return(LINELIST)
 
-
-"""
-lis=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
-
-ITERATION=0
-ROT=0
-SHIFT=40
-
-test=LineList(ITERATION, ROT, SHIFT)
-test2=(Angle((ITERATION+1)%3)+SHIFT)+ROT
-
-print(test2)
-print()
-print(test)
-print()
-print(lis)
-"""
-
-DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
-symbol.show()
+Coordinates=DrawSymbol(Rot, Shift, Canvas, Buffer)
