@@ -95,7 +95,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 		line=LINELIST[n]
 		slope=degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))
-		rslope=radians(slope)
+		rslope=math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0]))
 		hypot=(line[1][0]-line[1][0])/(math.cos(rslope))
 		TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		print(slope)
