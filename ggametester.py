@@ -24,7 +24,9 @@ def radians(ANGLE):
 
 while i < 12:
     angle=radians((360/numrot)*((i+(numrot/4))%numrot))
-    line=[math.cos(angle)*radius,math.sin(angle)*radius]
+    linecoor=[math.cos(angle)*radius,math.sin(angle)*radius]
+    line=LineAsset(linecoor[0], linecoor[1], LC1[i])
+    Sprite(line, (500, 500))
     i=i+1
 
 DrawSigil = App()
