@@ -147,6 +147,11 @@ def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	LC2=LineStyle(1, COLOR2)
 	BG=Color(0xffffff, 1.0)
 	
+	SEC=LineList(1, 0, SHIFT)
+	HEAD=Intersect(Angle(1)+180)
+	
+	RADIUS=
+	
 	CIRCLE=CircleAsset((RADIUS*SCALE), LC2, BG)
 	Sprite(SCREEN, ((CANVAS/2)-(PAD/2),(CANVAS/2)-(PAD/2)))
 	i=0
