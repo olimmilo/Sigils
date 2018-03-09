@@ -81,7 +81,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	LC2=LineStyle(8, COLOR2)
 	BG=Color(0xffffff, 0.0)
 	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
-	CIRCLE=CircleAsset((Radius*SCALE), LC1, Color(0x993399, 0.25))
+	CIRCLE=CircleAsset((Radius*SCALE), LC1, Color(0x993399, 0.15))
 	#Sprite(SCREEN, (0,0))
 	Sprite(CIRCLE, (PAD,PAD))
 	i=0
@@ -139,6 +139,9 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		#Sprite(TEMPline, (line[0][0],line[0][1]))
 		n=n+1
 
+	LC1=LineStyle(8, COLOR1)
+	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
+	Sprite(CIRCLE, (PAD,PAD))
 	return(LINELIST)
 
 def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
