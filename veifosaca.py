@@ -1,7 +1,7 @@
 bl_info = {"name": "Veifosaca Circle Creator", "category": "Add Mesh"}
 
 import math
-import bpy
+#import bpy
 
 Rot=0
 Shift=40
@@ -70,7 +70,7 @@ def LineList(ITERATION, ROT, SHIFT,CENTER):
     line.append([Intersect(((Angle(ITERATION)+SHIFT)+ROT),CENTER),Intersect(((Angle(ITERATION)-SHIFT)+ROT),CENTER)])
     return(line)
 
-def DrawInit2d(ROT, SHIFT, CANVAS, BUFFER,CENTER):
+def Sigil(ROT, SHIFT, CANVAS, BUFFER,CENTER):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
@@ -82,9 +82,13 @@ def DrawInit2d(ROT, SHIFT, CANVAS, BUFFER,CENTER):
 		i=i+1
 	return(LINELIST)
 
-Coordinates=DrawInit2d(Rot, Shift, Canvas, Buffer,Center)
+def CleanPlane(Coordinates)
+
+Coordinates=Sigil(Rot, Shift, Canvas, Buffer, Center)
 
 
+
+"""
 def register():
     bpy.utils.register_class(ObjectMoveX)
 
@@ -94,3 +98,4 @@ def unregister():
 
 if __name__ == "__main__":
     register()
+"""
