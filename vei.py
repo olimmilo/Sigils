@@ -151,7 +151,7 @@ def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	Sprite(SCREEN, ((CANVAS/2)-(PAD/2),(CANVAS/2)-(PAD/2)))
 	i=0
 	while i<3:
-	    i+=1
+	    i=i+1
 	return()
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
