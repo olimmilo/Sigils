@@ -65,9 +65,9 @@ def Angle(ITERATION):
 
 def LineList(ITERATION, ROT, SHIFT,CENTER):
     line=[]
-    line.append([Intersect((Angle(ITERATION))+ROT,CENTER),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT,CENTER)])
-    line.append([Intersect((Angle(ITERATION)+ROT,CENTER),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT,CENTER)])
-    line.append([Intersect((Angle(ITERATION)+SHIFT,CENTER)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT,CENTER)])
+    line.append([Intersect((Angle(ITERATION)+ROT),CENTER),Intersect(((Angle((ITERATION-1)%3)-SHIFT)+ROT),CENTER)])
+    line.append([Intersect((Angle(ITERATION)+ROT),CENTER),Intersect(((Angle((ITERATION+1)%3)+SHIFT)+ROT),CENTER)])
+    line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),CENTER),Intersect(((Angle(ITERATION)-SHIFT)+ROT),CENTER)])
     return(line)
 
 def DrawInit2d(ROT, SHIFT, CANVAS, BUFFER,CENTER):
