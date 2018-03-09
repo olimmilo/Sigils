@@ -145,11 +145,13 @@ def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	LINELIST=[]
 	LC1=LineStyle(1, COLOR1)
 	LC2=LineStyle(1, COLOR2)
-	BG=Color(0xffffff, 0.0)
+	BG=Color(0xffffff, 1.0)
 	
 	CIRCLE=CircleAsset((RADIUS*SCALE), LC2, BG)
 	Sprite(SCREEN, ((CANVAS/2)-(PAD/2),(CANVAS/2)-(PAD/2)))
-	Sprite(CIRCLE, (PAD,PAD))
+	i=0
+	while i<3:
+	    i+=1
 	return()
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
