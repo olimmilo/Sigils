@@ -5,9 +5,9 @@ import math
 #go here https://github.com/HHS-IntroProgramming/Standards-and-Syllabus/wiki/Programmed-Graphics
 
 Rot = 0
-Shift = 60
+Shift = 40
 Canvas = 500
-Buffer = 0
+Buffer = 20
 Colors=[0xFE2712, 0xFC600A, 0xFB9902, 0xFCCC1A, 0xFEFE33, 0xB2D732, 0x66B032, 0x347C98, 0x0247FE, 0x4424D6, 0x8601AF, 0xC21460]
 Color1=Color(0x000000, 1.0)
 Color2=Color(0x993399, 1.0)
@@ -139,7 +139,21 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 
 	return(LINELIST)
 
+def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
+	SCALE=CANVAS-BUFFER
+	PAD=BUFFER/2
+	LINELIST=[]
+	LC1=LineStyle(1, COLOR1)
+	LC2=LineStyle(1, COLOR2)
+	BG=Color(0xffffff, 0.0)
+	
+	CIRCLE=CircleAsset((RADIUS*SCALE), LC2, BG)
+	Sprite(SCREEN, ((CANVAS/2)-(PAD/2),(CANVAS/2)-(PAD/2)))
+	Sprite(CIRCLE, (PAD,PAD))
+	return()
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
+
+DrawSubSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
 DrawSigil = App()
 DrawSigil.run()
