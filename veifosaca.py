@@ -60,12 +60,12 @@ def Intersect(ANGLE,CENTER):
 	return(COOR)
 
 def LineIntersect(LINEONE, LINETWO):
-    x1=LINEONE[0]
-    x2=LINETWO[0]
-    y1=LINEONE[1]
-    y2=LINETWO[1]
-    m1=
-    m2=
+    x1=LINEONE[0][0]
+    x2=LINETWO[0][0]
+    y1=LINEONE[0][1]
+    y2=LINETWO[0][1]
+    m1=(LINEONE[1][1]-LINEONE[0][1])/(LINEONE[1][0]-LINEONE[0][0])
+    m2=(LINETWO[1][1]-LINETWO[0][1])/(LINETWO[1][0]-LINETWO[0][0])
     
     COOR=[,()]
     return(COOR)
