@@ -82,12 +82,13 @@ def Sigil(ROT, SHIFT, CANVAS, BUFFER,CENTER):
 		i=i+1
 	return(LINELIST)
 
-def CleanPlane(Coordinates):
+def CleanPlane(COOR):
     
+    return(COORclean)
 
 Coordinates=Sigil(Rot, Shift, Canvas, Buffer, Center)
 
-
+print(len(Coordinates))
 
 """
 def register():
