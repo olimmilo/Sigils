@@ -139,7 +139,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		#Sprite(TEMPline, (line[0][0],line[0][1]))
 		n=n+1
 
-	LC1=LineStyle(8, COLOR1)
+	LC1=LineStyle(8, COLOR2)
 	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
 	Sprite(CIRCLE, (PAD,PAD))
 	return(LINELIST)
