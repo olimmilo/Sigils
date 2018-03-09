@@ -1,4 +1,7 @@
 import math
+import bpy
+
+bl_info = {"name": "Veifosaca Circle Creator", "category": "Object"}
 
 Rot=0
 Shift=40
