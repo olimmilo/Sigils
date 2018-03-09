@@ -67,7 +67,7 @@ def LineIntersect(LINEONE, LINETWO):
     m1=(LINEONE[1][1]-LINEONE[0][1])/(LINEONE[1][0]-LINEONE[0][0])
     m2=(LINETWO[1][1]-LINETWO[0][1])/(LINETWO[1][0]-LINETWO[0][0])
     
-    COOR=[,()]
+    COOR=[((((m1*((m2*(x1-x2))+y2))-(y1*m2))/(m1-m2))-y1+(m1*x1))/m1,(((m1*((m2*(x1-x2))+y2))-(y1*m2))/(m1-m2))]
     return(COOR)
 
 def Angle(ITERATION):
