@@ -117,7 +117,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		if slope > 0 and slope < 90:
 		    if line[0][0] > line[1][0]:
 		        print("x")
-			elif line[0][1] > line[1][1]:
+		    elif line[0][1] > line[1][1]:
 			    print("y")
 			Sprite(TEMPline, (line[0][0], line[0][1]))
 			print("a")
