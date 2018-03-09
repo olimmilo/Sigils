@@ -97,7 +97,6 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		slope=(degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0]))))%360
 		rslope=(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))%(2*math.pi)
 		hypot=(line[1][0]-line[0][0])/(math.cos(rslope))
-		print(n+1)
 		if slope == 0 or slope == 360:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		    Sprite(TEMPline, (line[0][0], line[0][1]))
@@ -136,7 +135,6 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 				Sprite(TEMPline, (line[0][0], line[0][1]+(math.sin(rslope)*hypot)))
 		
 		#Sprite(TEMPline, (line[0][0],line[0][1]))
-		print()
 		n=n+1
 
 	return(LINELIST)
