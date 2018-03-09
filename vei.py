@@ -143,8 +143,8 @@ def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
-	LC1=LineStyle(1, COLOR1)
-	LC2=LineStyle(1, COLOR2)
+	LC1=LineStyle(2, COLOR1)
+	LC2=LineStyle(2, COLOR2)
 	BG=Color(0xffffff, 0.0)
 	
 	SEC=LineList(1, 0, SHIFT)
