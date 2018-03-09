@@ -4,7 +4,7 @@ import math
 
 #go here https://github.com/HHS-IntroProgramming/Standards-and-Syllabus/wiki/Programmed-Graphics
 
-Rot = 0
+Rot = 40
 Shift = 40
 Canvas = 500
 Buffer = 20
