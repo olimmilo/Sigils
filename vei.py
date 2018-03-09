@@ -18,9 +18,9 @@ def degrees(ANGLE):
 
 #go here https://github.com/HHS-IntroProgramming/Standards-and-Syllabus/wiki/Programmed-Graphics
 
-Rot = radians(40)
+Rot = 60
 Shift = 40
-Canvas = 500
+Canvas = 550
 Buffer = 20
 Colors=[0xFE2712, 0xFC600A, 0xFB9902, 0xFCCC1A, 0xFEFE33, 0xB2D732, 0x66B032, 0x347C98, 0x0247FE, 0x4424D6, 0x8601AF, 0xC21460]
 Color1=Color(0x000000, 1.0)
@@ -77,11 +77,11 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
-	LC1=LineStyle(6, COLOR1)
-	LC2=LineStyle(6, COLOR2)
+	LC1=LineStyle(8, COLOR1)
+	LC2=LineStyle(8, COLOR2)
 	BG=Color(0xffffff, 0.0)
 	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
-	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
+	CIRCLE=CircleAsset((Radius*SCALE), LC1, Color(0x993399, 0.25))
 	#Sprite(SCREEN, (0,0))
 	Sprite(CIRCLE, (PAD,PAD))
 	i=0
@@ -92,7 +92,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		i=i+1
 	n=0
 	while n < len(LINELIST):
-		LC1=LineStyle(4, COLOR1)
+		LC1=LineStyle(4, COLOR2)
 		LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 		LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 		line=LINELIST[n]
