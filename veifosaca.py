@@ -59,6 +59,17 @@ def Intersect(ANGLE,CENTER):
 	    print("you done fucked up")
 	return(COOR)
 
+def LineIntersect(LINEONE, LINETWO):
+    x1=LINEONE[0]
+    x2=LINETWO[0]
+    y1=LINEONE[1]
+    y2=LINETWO[1]
+    m1=
+    m2=
+    
+    COOR=[,()]
+    return(COOR)
+
 def Angle(ITERATION):
     ANGLE=(ITERATION*120)%360
     return(ANGLE)
@@ -88,7 +99,7 @@ def CleanPlane(COOR):
 
 Coordinates=Sigil(Rot, Shift, Canvas, Buffer, Center)
 
-print(len(Coordinates))
+print((Coordinates))
 
 """
 def register():
