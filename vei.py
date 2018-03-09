@@ -127,18 +127,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 
 	return(LINELIST)
 
-lisy=DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
-
-g=0
-
-print(lisy)
-print()
-while g < len(lisy):
-    h=0
-    while h < len(lisy[g]):
-        print(lisy[g][h][0],lisy[g][h][1])
-        h=h+1
-    g=g+1
+DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
 DrawSigil = App()
 DrawSigil.run()
