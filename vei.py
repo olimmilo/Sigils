@@ -153,7 +153,7 @@ def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	RADIUS=.1
 	
 	CIRCLE=CircleAsset((RADIUS*SCALE), LC2, BG)
-	Sprite(CIRCLE, ((CANVAS/2)+(RADIUS/2),(CANVAS/2)+(RADIUS/2)))
+	Sprite(CIRCLE, ((CANVAS/2)-((RADIUS*SCALE)/2),(CANVAS/2)-((RADIUS*SCALE)/2)))
 	i=0
 	while i<3:
 	    i=i+1
