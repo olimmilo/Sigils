@@ -1,7 +1,7 @@
+bl_info = {"name": "Veifosaca Circle Creator", "category": "Add Mesh"}
+
 import math
 import bpy
-
-bl_info = {"name": "Veifosaca Circle Creator", "category": "Add Mesh"}
 
 Rot=0
 Shift=40
@@ -26,13 +26,13 @@ def degrees(ANGLE):
     angle=ANGLE*(360/(2*math.pi))
     return(angle)
 
-def Intersect(ANGLE):
+def Intersect(ANGLE,CENTER):
 	COOR=[-1,-1]
 	ANGLE=ANGLE%360
 	LEN=COOR[0]
 	r=0.5
-	j=Center[0]
-	k=Center[1]
+	j=CENTER[0]
+	k=CENTER[1]
 	m=(math.tan(radians(ANGLE)))
 	n=LEN
 	if ANGLE == 0:
@@ -63,23 +63,34 @@ def Angle(ITERATION):
     ANGLE=(ITERATION*120)%360
     return(ANGLE)
 
-def LineList(ITERATION, ROT, SHIFT):
+def LineList(ITERATION, ROT, SHIFT,CENTER):
     line=[]
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT)])
-    line.append([Intersect((Angle(ITERATION))+ROT),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT)])
-    line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT),Intersect((Angle(ITERATION)-SHIFT)+ROT)])
+    line.append([Intersect((Angle(ITERATION))+ROT,CENTER),Intersect((Angle((ITERATION-1)%3)-SHIFT)+ROT,CENTER)])
+    line.append([Intersect((Angle(ITERATION)+ROT,CENTER),Intersect((Angle((ITERATION+1)%3)+SHIFT)+ROT,CENTER)])
+    line.append([Intersect((Angle(ITERATION)+SHIFT)+ROT,CENTER),Intersect((Angle(ITERATION)-SHIFT)+ROT,CENTER)])
     return(line)
 
-def DrawInit2d(ROT, SHIFT, CANVAS, BUFFER):
+def DrawInit2d(ROT, SHIFT, CANVAS, BUFFER,CENTER):
 	SCALE=CANVAS-BUFFER
 	PAD=BUFFER/2
 	LINELIST=[]
 	i=0
 	while i <= 2:
-		list=LineList(i, ROT, SHIFT)
+		list=LineList(i, ROT, SHIFT,CENTER)
 		LINELIST.extend(list)
 		list=[]
 		i=i+1
 	return(LINELIST)
 
-Coordinates=DrawInit2d(Rot, Shift, Canvas, Buffer)
+Coordinates=DrawInit2d(Rot, Shift, Canvas, Buffer,Center)
+
+
+def register():
+    bpy.utils.register_class(ObjectMoveX)
+
+
+def unregister():
+    bpy.utils.unregister_class(ObjectMoveX)
+
+if __name__ == "__main__":
+    register()
