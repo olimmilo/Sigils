@@ -90,7 +90,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		i=i+1
 	n=0
 	while n < len(LINELIST):
-		LC1=LineStyle(1, COLOR1)
+		LC1=LineStyle(4, COLOR1)
 		LINELIST[n][0]=[(e*SCALE)+PAD for e in LINELIST[n][0]]
 		LINELIST[n][1]=[(j*SCALE)+PAD for j in LINELIST[n][1]]
 		line=LINELIST[n]
