@@ -80,7 +80,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	BG=Color(0xffffff, 0.0)
 	SCREEN=RectangleAsset(CANVAS, CANVAS, LC1, BG)
 	CIRCLE=CircleAsset((Radius*SCALE), LC1, BG)
-	Sprite(SCREEN, (0,0))
+	#Sprite(SCREEN, (0,0))
 	Sprite(CIRCLE, (PAD,PAD))
 	i=0
 	while i <= 2:
@@ -160,7 +160,7 @@ def DrawSubSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 	return()
 DrawSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
-DrawSubSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
+#DrawSubSymbol(Rot, Shift, Canvas, Buffer, Color1, Color2)
 
 DrawSigil = App()
 DrawSigil.run()
