@@ -102,10 +102,17 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		if slope == 0 or slope == 360:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		    Sprite(TEMPline, (line[0][0], line[0][1]))
+		    if line[0][0] > line[1][0]:
+		        Sprite(TEMPline, (line[0][0], line[0][1]))
+		    else:
+		        Sprite(TEMPline, (line[1][0], line[0][1]))
 		    print("0")
 		elif slope == 90 or slope == 270:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
-		    Sprite(TEMPline, (line[0][0], line[1][1]))
+		    if line[0][1] > line[1][1]:
+		        Sprite(TEMPline, (line[0][0], line[0][1]))
+		    else:
+		        Sprite(TEMPline, (line[0][0], line[1][1]))
 		    print("90/270")
 		else:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
