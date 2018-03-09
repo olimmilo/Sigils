@@ -1,4 +1,4 @@
-bl_info = {"name": "Veifosaca Circle Creator", "category": "Add Mesh"}
+#bl_info = {"name": "Veifosaca Circle Creator", "category": "Add Mesh"}
 
 import math
 #import bpy
@@ -60,15 +60,20 @@ def Intersect(ANGLE,CENTER):
 	return(COOR)
 
 def LineIntersect(LINEONE, LINETWO):
-    x1=LINEONE[0][0]
-    x2=LINETWO[0][0]
-    y1=LINEONE[0][1]
-    y2=LINETWO[0][1]
-    m1=(LINEONE[1][1]-LINEONE[0][1])/(LINEONE[1][0]-LINEONE[0][0])
-    m2=(LINETWO[1][1]-LINETWO[0][1])/(LINETWO[1][0]-LINETWO[0][0])
-    
-    COOR=[((((m1*((m2*(x1-x2))+y2))-(y1*m2))/(m1-m2))-y1+(m1*x1))/m1,(((m1*((m2*(x1-x2))+y2))-(y1*m2))/(m1-m2))]
-    return(COOR)
+	x1=LINEONE[0][0]
+	x2=LINETWO[0][0]
+	y1=LINEONE[0][1]
+	y2=LINETWO[0][1]
+	m1=(LINEONE[1][1]-LINEONE[0][1])/(LINEONE[1][0]-LINEONE[0][0])
+	m2=(LINETWO[1][1]-LINETWO[0][1])/(LINETWO[1][0]-LINETWO[0][0])
+	COOR=[((((m1*((m2*(x1-x2))+y2))-(y1*m2))/(m1-m2))-y1+(m1*x1))/m1,(((m1*((m2*(x1-x2))+y2))-(y1*m2))/(m1-m2))]
+	return(COOR)
+
+def LineIntersectTruth(LINEONE, LINETWO):
+	COOR=LineIntersect(LINEONE, LINETWO)
+	TRUTH=0
+	
+	return(TRUTH)
 
 def Angle(ITERATION):
     ANGLE=(ITERATION*120)%360
