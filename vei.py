@@ -97,6 +97,7 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		slope=(degrees(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0]))))%360
 		rslope=(math.atan((line[1][1]-line[0][1])/(line[1][0]-line[0][0])))%(2*math.pi)
 		hypot=(line[1][0]-line[0][0])/(math.cos(rslope))
+		print(n+1)
 		if slope == 0 or slope == 360:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		    Sprite(TEMPline, (line[0][0], line[0][1]))
@@ -104,7 +105,6 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		        Sprite(TEMPline, (line[1][0], line[0][1]))
 		    else:
 		        Sprite(TEMPline, (line[0][0], line[0][1]))
-		    print("0")
 		elif slope == 90 or slope == 270:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		    if line[0][1] > line[1][1]:
@@ -115,15 +115,31 @@ def DrawSymbol(ROT, SHIFT, CANVAS, BUFFER, COLOR1, COLOR2):
 		else:
 		    TEMPline=LineAsset((line[1][0]-line[0][0]),(line[1][1]-line[0][1]), LC1)
 		if slope > 0 and slope < 90:
+		    if line[0][1] > line[1][1]:
+		        print("y")
+		    elif line[0][0] > line[1][0]:
+		        print("x")
 			Sprite(TEMPline, (line[0][0], line[0][1]))
 			print("a")
 		elif slope > 90 and slope < 180:
+		    if line[0][1] > line[1][1]:
+		        print("y")
+		    elif line[0][0] > line[1][0]:
+		        print("x")
 			Sprite(TEMPline, (line[0][0]+(math.cos(rslope)*hypot), line[0][1]))
 			print("b")
 		elif slope > 180 and slope < 270:
+		    if line[0][1] > line[1][1]:
+		        print("y")
+		    elif line[0][0] > line[1][0]:
+		        print("x")
 			Sprite(TEMPline, (line[0][0]+(math.cos(rslope)*hypot), line[0][1]+(math.sin(rslope)*hypot)))
 			print("c")
 		elif slope > 270 and slope < 360:
+		    if line[0][1] > line[1][1]:
+		        print("y")
+		    elif line[0][0] > line[1][0]:
+		        print("x")
 			Sprite(TEMPline, (line[0][0], line[0][1]+(math.sin(rslope)*hypot)))
 			print("d")
 		
